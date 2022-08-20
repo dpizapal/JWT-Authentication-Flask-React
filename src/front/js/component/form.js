@@ -64,12 +64,9 @@ const Form = () => {
       </div>
 
       <div className="mt-4">
-        Si aun no estas registrado, hazlo
+        Si aun no estas registrado, haz
         <Link to={"/registroView"}>
           <u className="link ms-2">Click aquí</u>
-        </Link>
-        <Link to={"/single/" + index}>
-          <span>Link to: {item.title}</span>
         </Link>
       </div>
     </div>
