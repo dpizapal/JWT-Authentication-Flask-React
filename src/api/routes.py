@@ -35,9 +35,9 @@ def create_new_user():
 # Create a route to authenticate your users and return JWTs. The
 # create_access_token() function is used to actually generate the JWT.
 
-@app.route("/login", methods=["POST"])
+@api.route("/login", methods=["POST"])
 def login():
-    username = request.json.get("email", None)
+    email = request.json.get("email", None)
     password = request.json.get("password", None)
     user = User.query.filter_by(email = email).first()
     if user is None: 
@@ -54,7 +54,7 @@ def login():
 # Protect a route with jwt_required, which will kick out requests
 # without a valid JWT present.
 
-@app.route("/protected", methods=["GET"])
+@api.route("/protected", methods=["GET"])
 @jwt_required()
 def protected():
 
