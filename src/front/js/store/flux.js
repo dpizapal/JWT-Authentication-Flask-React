@@ -57,7 +57,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       },
 
       // REGISTRO
-      registration: (email, password) {
+      registration: (email, password) => {
         fetch(process.env.BACKEND_URL + "/api/user", {
           method: "POST",
           body: JSON.stringify({
