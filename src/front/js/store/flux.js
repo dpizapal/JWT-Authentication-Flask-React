@@ -69,6 +69,11 @@ const getState = ({ getStore, getActions, setStore }) => {
           },
         })
           .then((response) => {
+            if (response.status === 200) {
+              alert("Registrado correctamente");
+            } else {
+              alert("email o contraseña incorrecta");
+            }
             return response.json();
           })
           .then((data) => {

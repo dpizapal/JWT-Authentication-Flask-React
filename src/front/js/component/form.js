@@ -44,19 +44,7 @@ const Form = () => {
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
-              <div className=" container mb-3 form-check">
-                <input
-                  type="checkbox"
-                  className="form-check-input"
-                  id="exampleCheck1"
-                />
-                <label
-                  className="form-check-label ms-2"
-                  htmlFor="exampleCheck1"
-                >
-                  Check me out
-                </label>
-              </div>
+
               <button className=" button btn  mt-3 mb-3">Submit</button>
             </form>
           </div>
